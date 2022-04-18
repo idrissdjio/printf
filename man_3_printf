@@ -1,0 +1,52 @@
+.TH _PRINTF "1" "31 July 2019" "0x11" "_printf man page"
+.SH NAME
+_printf - format and print data
+.SH SYNOPSIS
+.B printf FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+Prints ARGUMENT(s) based on FORMAT
+
+If format includes format specifiers (subsequences beginning with %), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.
+
+_printf will also take an indefinite amount of arguments.
+
+Example:
+printf("%d", number);
+
+In this example, the value of [number] will be printed in place of %d in the string of the first parameter.
+
+.B The conversion specifiers
+
+.IP %c
+- prints a character
+.IP %s
+- prints a string
+.IP %%
+- prints a percentage symbol
+.IP %d
+- prints a decimal
+.IP %i
+- prints an integer
+.IP %b
+- prints a binary number
+.IP %u
+- prints an unsigned decimal
+.IP %o
+- prints an octal decimal
+.IP %x
+- prints a hexadecimal (lowercase)
+.IP %X
+- prints a hexadecimal (uppercase)
+.IP %S
+- prints a string where non-printable characters are replaced with a \\x followed by the ASCII code value in hexadecimal
+.IP %p
+- prints a pointer value
+.IP %r
+- prints the reverse of a string
+.IP %R
+- prints a rot13'ed string
+
+.SH SEE ALSO
+.I printf (3)
+.SH AUTHOR
+Marco Chan and Ryuichi Miyazaki
