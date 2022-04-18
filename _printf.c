@@ -5,7 +5,7 @@
  * @format: string that contains the format to print
  * Return: number of characters written
  */
-int _printf(const char *format, ...)
+int _printf(char *format, ...)
 {
 	int written = 0, (*print_fn)(char *, va_list);
 	char specifier[3];
